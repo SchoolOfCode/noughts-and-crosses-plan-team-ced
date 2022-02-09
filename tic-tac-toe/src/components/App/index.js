@@ -13,7 +13,7 @@ function App() {
 
   return (
 
-    <Gameboard gameState={gameState}/>
+    <Gameboard setGameState={setGameState} gameState={gameState}/>
 
   );
 }
