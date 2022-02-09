@@ -4,19 +4,11 @@ import useCheckWinner from '../../helper.js';
 
 
 export default function Row({ winner, setWinner, gameState , row, setGameState, turn, setTurn}){
-
-
- 
-  const isWon = useCheckWinner(gameState)
-
-  if (isWon !== false){
-      setWinner(isWon)
-  }
-      
+ const isWon = useCheckWinner(gameState)
+ if (isWon !== false){
+    setWinner(isWon)}
    
-
-
-    const myRow = gameState[row]
+const myRow = gameState[row]
     // array with three arrays in it
     // update one array and preserve the other arrays 
     // at the moment we're adding the entire array back in 
@@ -26,8 +18,8 @@ export default function Row({ winner, setWinner, gameState , row, setGameState, 
         console.log(myRow)
         setGameState( [...gameState.slice(0,row), myRow ,...gameState.slice(row +1)] )
         console.log(gameState)
+        
         setTurn(turn === "O"?"X":"O")
-       
     }
 
  
