@@ -8,7 +8,7 @@ import Gameboard from '../Gameboard';
 function App() {
   const [turn, setTurn] = useState(null)
  
-  const [gameState, setGameState] = useState([["x",null,"x"], [null,null,null], [null,"O",null] ])
+  const [gameState, setGameState] = useState([[null,null,null], [null,null,null], [null,null,null] ])
 
 
   return (
