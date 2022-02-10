@@ -1,6 +1,31 @@
 # Billie Eilish
 import webbrowser
 import os
+import time
+
+score = 0
+
+def questionAndAnswer( question, answers, correctAnswer, rightMessage, WrongMessage): 
+    global score 
+    print(question)
+
+    print(answers[0])
+    print(answers[1])
+    print(answers[2])
+
+    res = input().lower()
+    print(res)
+    if(res == correctAnswer):
+        score += 1
+        os.system('cls||clear')
+        print(rightMessage)
+        time.sleep(3)
+        os.system('cls||clear')
+    else:
+        print(WrongMessage + ". Your score was " + str(score))
+
+        exit()
+
 
 
 print("Hello! Would you like to play a game of trivai?")
@@ -22,19 +47,17 @@ else:
 
 os.system('cls||clear')
 
-print("Which flies a green, white, and orange (in that order) tricolour flag?")
 
-print("Ireland")
-print("Ivory Coast")
-print("Italy")
+questionAndAnswer("Which flies a green, white, and orange (in that order) tricolour flag?" , ["Ireland" , "Ivory Coast" , "Italy"] , "italy" ,
+"OOo we got a little nerd on our hands over here", "'You're a failure'- your mother... probably")
 
-res = input().lower()
-print(res)
-if(res == "italy"):
-    print("OOo we got a little nerd on our hands over here")
-else:
-    print("'You're a failure'- your mother... probably")
-    exit()
+questionAndAnswer("What company makes the Xperia model of smartphone?" , ["Samsung", "Sony" , "Nokia"], "sony" , 
+"Well done you!!! (sarcasm)", "'You're a failure'- your mother... probably")
+
+questionAndAnswer("Which city is home to the Brandenburg Gate?" , 
+["Vienna" , "Zurich" , "Berlin"] , "berlin", "Wooooooooowwwwwwww, what a little star (again, sarcasm)" , 
+"you will never win your parents affection.")
+
 
 
 
