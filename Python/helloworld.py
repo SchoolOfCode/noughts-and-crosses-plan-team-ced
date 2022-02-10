@@ -19,11 +19,11 @@ def questionAndAnswer( question, answers, correctAnswer, rightMessage, WrongMess
         score += 1
         os.system('cls||clear')
         print(rightMessage)
-        time.sleep(3)
+        time.sleep(1)
         os.system('cls||clear')
     else:
+        os.system('cls||clear')
         print(WrongMessage + ". Your score was " + str(score))
-
         exit()
 
 
@@ -40,7 +40,7 @@ if(res == "no"):
 elif(res == "yes"):
     print("GOOD LET'S GOOOOOOOOOOOO")
 else:
-    print("i asked you ONE question with TWO options you fucking idiot, learn to spell, fuck off and leave me alone")
+    print("i asked you ONE question with TWO options you idiot, learn to spell, go away and leave me alone")
     webbrowser.open("https://www.youtube.com/watch?v=PV3_UHG73oQ", new=1)
     exit()
 
@@ -58,39 +58,11 @@ questionAndAnswer("Which city is home to the Brandenburg Gate?" ,
 ["Vienna" , "Zurich" , "Berlin"] , "berlin", "Wooooooooowwwwwwww, what a little star (again, sarcasm)" , 
 "you will never win your parents affection.")
 
+questionAndAnswer("Which of the following is NOT a fruit?", ["Rhubarb" , "Tomatoes" , "Avocados"] , "rhubarb" , "Congratulations...you're not a banana" , "what a banana")
 
-
-
-
-
-# 2) Which flies a green, white, and orange (in that order) tricolour flag? 
-
-# Ireland
-# Ivory Coast
-# Italy
-# Italy
-
-# 3) What company makes the Xperia model of smartphone?
-
-# Samsung
-# Sony 
-# Nokia
-# Sony
-
-# 4) Which city is home to the Brandenburg Gate?
-
-# Vienna
-# Zurich
-# Berlin
-# Berlin
-
-# 5) Which of the following is NOT a fruit?
-
-# Rhubarb
-# Tomatoes
-# Avocados
-# Rhubarb
-
+questionAndAnswer("Where was the first example of paper money used?", ["China", "Turkey", "Greece"], "greece", 
+"You finished the game!!!.....what a sad little life. Are you happy?", "Like most things in life...you failed to finish. Do better.")
+webbrowser.open("https://www.youtube.com/watch?v=2IRcM9qwDwo", new=1)
 # 6) Where was the first example of paper money used?
 
 # China
